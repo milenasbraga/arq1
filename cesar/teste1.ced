@@ -1,6 +1,7 @@
-CLR	R5 ;;R5 = 0
-SCC	C ;;set C on
-ADC	R5 ;;R5 += Carry
-NOT	R5 ;;not R5
-ROL	R5 ;;carry goes to the less significant bit of the R5 and the most significant bit goes to carry
+CLR	R5  ;; R5 = 0
+SCC	C   ;; set C on
+ADC	R5  ;; R5 += Carry, so R5 = 1
+NOT	R5  ;; not R5, R5 = FFFE
+ROL	R5  ;; the actual carry goes to the less 
+        ;; significant bit of the R5 and the most significant bit of R5 now replaces carry
 HLT
